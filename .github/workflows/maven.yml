@@ -27,6 +27,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Set up Myql
+      run : sudo /etc/init.d/mysql start
+           mysql -e 'CREATE DATABASE sql12678583' -u sql12678583 -p n4RLwqz5jz
     - name: Build Quiz App with Maven
       run: mvn clean install
 
