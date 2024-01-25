@@ -11,7 +11,7 @@ class QuizAppApplicationTests {
 
 	@Test
 	void contextLoads(ApplicationContext context ) {
-		assertThat(context).isNull();
+		assertThat(context).isNotNull();
 	}
 
 }
