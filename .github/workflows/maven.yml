@@ -33,13 +33,4 @@ jobs:
     - name: Build Quiz App with Maven
       run: mvn clean install
     - name: Test
-      run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
-
-    - name: Report
-      uses: dorny/test-reporter@v1
-      if: always()
-      with:
-          name: Maven Tests
-          path: target/surefire-reports/*.xml
-          reporter: java-junit
-          fail-on-error: true
+      run: mvn test
